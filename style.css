@@ -9,19 +9,18 @@
 
 :root {
   --bg-color: #cdd4db;
-  --text-color: #757a7f;
+  --text-color: #f0f2f4;
   --card-bg: #f2eef8;
   --accent-color: #0d6efd;
   --border-color: #f3e9e9;
 }
 
 /* Dark Mode Variables */
-body.dark-theme {
-  --bg-color: #121212;
-  --text-color: #735959;
-  --card-bg: #1e1e1e;
-  --accent-color: #3d8bfd;
-  --border-color: #333333;
+body.dark-mode .card,
+body.dark-mode .container,
+body.dark-mode section {
+    background-color: #1e1e1e;
+    color: #ffffff;
 }
 
 body {
@@ -137,7 +136,7 @@ body {
 
 .btn-primary {
   background-color: var(--accent-color);
-  color: #f6f1f1;
+  color: #ffffff;
 }
 
 .btn-secondary {
@@ -301,7 +300,7 @@ footer {
 .hero-name {
   font-size: 2.5rem;
   font-weight: 800;        /* Bold weight matching the image */
-  color: #111827;          /* Deep navy/black shade */
+  color: #eef0f2;          /* Deep navy/black shade */
   margin: 0;
   line-height: 1.1;
 }
@@ -310,7 +309,7 @@ footer {
 .hero-title {
   font-size: 0.95rem;
   font-weight: 600;
-  color: #374151;          /* Matching dark grey */
+  color: #f4f6f8;          /* Matching dark grey */
   text-transform: uppercase;
   letter-spacing: 1.5px;   /* Clean spacing between letters */
   margin-top: 0.4rem;
