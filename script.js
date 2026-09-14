@@ -1,13 +1,20 @@
 function toggleTheme() {
-    document.body.classList.toggle("dark-mode");
-    document.body.classList.toggle("dark");
+    const isDark = document.body.classList.toggle("dark-mode");
+    document.body.classList.toggle("dark", isDark);
 
     const btn = document.querySelector("#theme-toggle, .theme-toggle, button");
     if (btn) {
-        if (document.body.classList.contains("dark-mode") || document.body.classList.contains("dark")) {
-            btn.textContent = "☀️ Light";
-        } else {
-            btn.textContent = "🌙 Dark";
-        }
+        btn.textContent = isDark ? "☀️ Light" : "🌙 Dark";
     }
 }
+
+// Additional backup event handler
+document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.querySelector("#theme-toggle, .theme-toggle, button");
+    if (btn) {
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            toggleTheme();
+        });
+    }
+});
