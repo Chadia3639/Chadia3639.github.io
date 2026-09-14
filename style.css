@@ -339,3 +339,64 @@ footer {
       display: none;
   }
 }
+
+/* Default / Light Mode Colors */
+body {
+    background-color: #f8f9fa !important;
+    color: #1a1a1a !important;
+}
+
+body h1, body h2, body h3, body h4, body p, body span, body a, body li, body div {
+    color: #1a1a1a !important;
+}
+
+/* Navbar & Nav Links */
+header, nav, .navbar {
+    background-color: #ffffff !important;
+}
+
+nav a, .nav-link, .logo {
+    color: #1a1a1a !important;
+}
+
+/* Cards & Containers */
+.card, .container, section, .about-content, .about-box {
+    background-color: #ffffff !important;
+    color: #1a1a1a !important;
+}
+
+/* Secondary Button Fix */
+.btn-secondary, button:not(.btn-primary) {
+    background-color: #e2e8f0 !important;
+    color: #1a1a1a !important;
+    border: 1px solid #cbd5e1 !important;
+}
+
+
+/* Dark Mode Overrides (When body has class .dark-mode or .dark) */
+body.dark-mode, body.dark {
+    background-color: #0f172a !important;
+    color: #f8fafc !important;
+}
+
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, 
+body.dark-mode p, body.dark-mode span, body.dark-mode a, body.dark-mode li,
+body.dark h1, body.dark h2, body.dark h3, body.dark h4, 
+body.dark p, body.dark span, body.dark a, body.dark li {
+    color: #f8fafc !important;
+}
+
+body.dark-mode header, body.dark-mode nav, body.dark-mode .navbar,
+body.dark header, body.dark nav, body.dark .navbar {
+    background-color: #1e293b !important;
+}
+
+body.dark-mode nav a, body.dark nav a {
+    color: #f8fafc !important;
+}
+
+body.dark-mode .card, body.dark-mode .container, body.dark-mode section,
+body.dark .card, body.dark .container, body.dark section {
+    background-color: #1e293b !important;
+    color: #f8fafc !important;
+}
