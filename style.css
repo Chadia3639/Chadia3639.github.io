@@ -373,42 +373,45 @@ nav a, .nav-link, .logo {
 }
 
 
-/* Dark Mode Overrides (When body has class .dark-mode or .dark) */
+/* LIGHT MODE DEFAULTS */
+body {
+    background-color: #f8f9fa;
+    color: #1a1a1a;
+}
+
+body h1, body h2, body h3, body h4, body p, body span, body a, body li, body div {
+    color: #1a1a1a;
+}
+
+header, nav, .navbar, .card, .container, section, .about-content, .about-box {
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
+.btn-secondary, button:not(.btn-primary) {
+    background-color: #e2e8f0;
+    color: #1a1a1a;
+    border: 1px solid #cbd5e1;
+}
+
+/* DARK MODE OVERRIDES */
 body.dark-mode, body.dark {
     background-color: #0f172a !important;
-    color: #f8fafc !important;
+    color: #ffffff !important;
 }
 
 body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, 
-body.dark-mode p, body.dark-mode span, body.dark-mode a, body.dark-mode li,
+body.dark-mode p, body.dark-mode span, body.dark-mode a, body.dark-mode li, body.dark-mode div,
 body.dark h1, body.dark h2, body.dark h3, body.dark h4, 
-body.dark p, body.dark span, body.dark a, body.dark li {
-    color: #f8fafc !important;
+body.dark p, body.dark span, body.dark a, body.dark li, body.dark div {
+    color: #ffffff !important;
 }
 
 body.dark-mode header, body.dark-mode nav, body.dark-mode .navbar,
-body.dark header, body.dark nav, body.dark .navbar {
-    background-color: #1e293b !important;
-}
-
-body.dark-mode nav a, body.dark nav a {
-    color: #f8fafc !important;
-}
-
 body.dark-mode .card, body.dark-mode .container, body.dark-mode section,
+body.dark-mode .about-content, body.dark-mode .about-box,
+body.dark header, body.dark nav, body.dark .navbar,
 body.dark .card, body.dark .container, body.dark section {
     background-color: #1e293b !important;
-    color: #f8fafc !important;
+    color: #ffffff !important;
 }
-// EMERGENCY THEME TOGGLE FIX
-document.addEventListener("DOMContentLoaded", () => {
-    // Finds your theme toggle button regardless of its ID or class
-    const themeBtn = document.querySelector("#theme-toggle, .theme-toggle, button");
-
-    if (themeBtn) {
-        themeBtn.addEventListener("click", () => {
-            document.body.classList.toggle("dark-mode");
-            document.body.classList.toggle("dark");
-        });
-    }
-});
