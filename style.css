@@ -400,3 +400,15 @@ body.dark .card, body.dark .container, body.dark section {
     background-color: #1e293b !important;
     color: #f8fafc !important;
 }
+// EMERGENCY THEME TOGGLE FIX
+document.addEventListener("DOMContentLoaded", () => {
+    // Finds your theme toggle button regardless of its ID or class
+    const themeBtn = document.querySelector("#theme-toggle, .theme-toggle, button");
+
+    if (themeBtn) {
+        themeBtn.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+            document.body.classList.toggle("dark");
+        });
+    }
+});
